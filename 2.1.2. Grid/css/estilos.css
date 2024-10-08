@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h4,
+p {
+  margin: 0px;
+}
+
+body {
+  background-color: white;
+}
+/* Este es el contenedor General donde fijo la estructura de la rejilla o Grid */
+.container {
+  color: #666666;
+  display: grid;
+  font-family: "Lobster", cursive;
+  grid-template-columns: 15% 50% 35%;
+  grid-template-rows: 5% 30% 3% 25% 5%;
+  margin: 20px auto;
+  width: 90%;
+}
+
+/* Cabecera de la página */
+header {
+  border-bottom: 1px solid #666666;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Menú lateral */
+nav {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 1em;
+}
+
+nav div {
+  margin-bottom: 20px;
+}
+
+/* Imagen grande */
+main {
+  border: 1px solid #aaaaaa;
+  border-radius: 1em;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-self: center;
+  padding: 1em;
+  text-align: center;
+  width: 90%;
+}
+
+main img {
+  border-radius: 1em;
+  height: 70%;
+  width: 80%;
+}
+
+/* Resto de imágenes. Colocadas por grid-auto-flow que por defecto es row */
+article {
+  border: 1px solid #aaaaaa;
+  border-radius: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+article img {
+  border-radius: 1em;
+  height: 60%;
+  width: 100%;
+}
+article:nth-of-type(1){
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+article:nth-of-type(2){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+article:nth-of-type(3){
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+article:nth-of-type(4) {
+  /*justify-self: end;*/
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* Pie de la página */
+footer {
+  align-items: center;
+  border-top: 1px solid #666666;
+  display: flex;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+footer img {
+  width: 50px;
+}
