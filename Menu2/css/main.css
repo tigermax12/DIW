@@ -1,0 +1,107 @@
+/* Estilos globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f3eb; /* Color de fondo para que coincida con la imagen */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.navTop {
+    grid-column: 1 / -1; /* Ocupa todas las columnas */
+    background-color: rgba(120, 0, 0, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.buttons {
+    display: flex;
+    gap: 1em;
+}
+/* Header */
+
+
+/* Enunciados */
+.enunciados {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 2em;
+    color: #8b1919;
+    text-align: left;
+    margin: 20px 0 10px;
+}
+
+/* Layout de rejilla */
+
+.entrantes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-gap: 20px; /* Espacio entre las columnas */
+}
+.primeros{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-gap: 20px; /* Espacio entre las columnas */
+}
+.segundos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-gap: 20px; /* Espacio entre las columnas */
+}
+.postres{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Tarjetas */
+.tarjeta01, .tarjeta02, .tarjeta03,
+.tarjeta04, .tarjeta05, .tarjeta06,
+.tarjeta07, .tarjeta08, .tarjeta09,
+.tarjeta10, .tarjeta11, .tarjeta12 {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+}
+
+.imagen {
+    width: 90%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.titulo {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.descripcion {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; /* Una sola columna para pantallas pequeñas */
+    }
+}
