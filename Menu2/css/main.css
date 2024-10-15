@@ -1,16 +1,17 @@
 /* Estilos globales */
+*{
+    margin: 0px;
+    padding: 0px;
+}
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f8f3eb; /* Color de fondo para que coincida con la imagen */
 }
-
 .container {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    /*max-width: 1600px;
+    margin: 0 auto;*/
+    /*padding: 20px;*/
 }
 .navTop {
     grid-column: 1 / -1; /* Ocupa todas las columnas */
@@ -18,25 +19,37 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: 2em;
 }
 
 .logo img {
     max-width: 100px;
+    grid-column: 2 / 5; /* Ocupa la columna 2 */
+    width: 90%;
+    height: 80%;
+    border-radius: 2em;
+    margin-left: 2em;
 }
 
 .buttons {
     display: flex;
-    gap: 1em;
+    gap: 2em;
 }
-/* Header */
 
+.options {
+    padding: 0.5em 1em;
+    border-radius: 10em;
+    width: 8em;
+    border: 1px solid white;
+    background-color: rgba(120, 0, 0, 1);
+    color: white;
+}
 
 /* Enunciados */
 .enunciados {
     font-family: 'Bilbo Swash Caps', cursive;
     font-size: 2em;
-    color: #8b1919;
+    color: #b3a2a2;
     text-align: left;
     margin: 20px 0 10px;
 }
@@ -46,22 +59,26 @@ body {
 .entrantes{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    grid-gap: 20px; /* Espacio entre las columnas */
+    grid-gap: 90px; /* Espacio entre las columnas */ /*Antes tenia 20*/
+    width: 80%;
 }
 .primeros{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    grid-gap: 20px; /* Espacio entre las columnas */
+    grid-gap: 80px; /* Espacio entre las columnas */
+    width: 80%;
 }
 .segundos{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    grid-gap: 20px; /* Espacio entre las columnas */
+    grid-gap: 80px; /* Espacio entre las columnas */
+    width: 80%;
 }
 .postres{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    grid-gap: 20px; /* Espacio entre las columnas */
+    grid-gap: 80px; /* Espacio entre las columnas */
+    width: 80%;
 }
 
 /* Tarjetas */
@@ -73,7 +90,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px;
+    padding: 18px;
 }
 
 .imagen {
@@ -91,6 +108,22 @@ body {
 .descripcion {
     font-size: 1em;
     color: #666;
+}
+.bottom {
+    grid-column: 1 / -1; /* Ocupa todas las columnas */
+    background-color: rgba(120, 0, 0, 0.8);
+    padding: 1em;
+    text-align: start;
+    grid-row: 4 / 5;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.map a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
 }
 
 /* Ajustes responsivos */
