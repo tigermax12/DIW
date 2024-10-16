@@ -47,11 +47,12 @@ body {
 
 /* Enunciados */
 .enunciados {
+    grid-column: 1;
     font-family: 'Bilbo Swash Caps', cursive;
-    font-size: 2em;
+    font-size: 3em;
     color: #b3a2a2;
-    text-align: left;
-    margin: 20px 0 10px;
+    text-align: center;
+    margin: 50px 0 30px;
 }
 
 /* Layout de rejilla */
@@ -61,24 +62,34 @@ body {
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
     grid-gap: 90px; /* Espacio entre las columnas */ /*Antes tenia 20*/
     width: 80%;
+    /*justify-content: center;
+    align-items: center;*/
+    margin: 0 auto;
+    row-gap: 50px;
 }
 .primeros{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
     grid-gap: 80px; /* Espacio entre las columnas */
     width: 80%;
+    margin: 0 auto;
+    row-gap: 50px;
 }
 .segundos{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
     grid-gap: 80px; /* Espacio entre las columnas */
     width: 80%;
+    margin: 0 auto;
+    row-gap: 50px;
 }
 .postres{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
     grid-gap: 80px; /* Espacio entre las columnas */
     width: 80%;
+    margin: 0 auto;
+    row-gap: 50px;
 }
 
 /* Tarjetas */
@@ -91,6 +102,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 18px;
+    /*justify-content: center;*/
 }
 
 .imagen {
@@ -103,11 +115,13 @@ body {
     font-size: 1.5em;
     color: #333;
     margin: 10px 0;
+    text-align: left;
 }
 
 .descripcion {
     font-size: 1em;
     color: #666;
+    text-align: left;
 }
 .bottom {
     grid-column: 1 / -1; /* Ocupa todas las columnas */
